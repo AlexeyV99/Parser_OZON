@@ -70,6 +70,8 @@ def get_product_links(item_name, driver):
         json.dump(products_urls_dict, file, indent=4, ensure_ascii=False)
     time.sleep(2)
 
+    print(products_urls)
+
     products_data = []
     for url in products_urls:
         data = collect_product_info(driver=driver, url=url)
